@@ -1,0 +1,422 @@
+<!doctype html>
+<!doctype html>
+<html>
+    <head>
+        <title>Products</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+        <style type="text/css">
+        @import "css/search.css";
+        </style>
+       <script>
+        $(document).ready(function(){
+          $("#price1").change(function(){
+            $('div[class^="card"]:not(.5to9)').hide();
+          });
+        
+          $("#price2").change(function(){
+            $('div[class^="card"]:not(.91to15)').hide();
+          });
+        
+          $("#price3").change(function(){
+            $('div[class^="card"]:not(.151to20)').hide();
+          });
+        });
+
+        $(document).ready(function () {
+            $("#reset").click(function () {
+                location.reload(true);
+            });
+        });
+
+        $(document).ready(function(){
+          $("#type1").change(function(){
+            $('div[class^="card"]:not(.cacti)').hide();
+          });
+        
+          $("#type2").change(function(){
+            $('div[class^="card"]:not(.succulents)').hide();
+          });
+        
+          $("#type3").change(function(){
+            $('div[class^="card"]:not(.others)').hide();
+          });
+        });
+        </script>
+    </head>
+    <body>
+
+        
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #099d40;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="img/brand/shortwhite_a little greener short copy.png" class="logo">
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse outer" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Our home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="searchbytype.html" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Resources
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
+                  <li><a class="dropdown-item" href="faq.html">FAQs</a></li>
+                  <li><a class="dropdown-item" href="tos.html">ToS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feedback.html">Feedback</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2 searchinput" type="search" placeholder="Search in page" aria-label="Search">
+              <button class="btn btn-outline-success searchbutton" type="submit" style="border-color: white; color: white;"><span class="searchtext">Search</span></button>
+              <button class="rightbutton" type="button">
+                <a href="registerlogin.html">
+                <i class="fa-solid fa-user"></i></a>
+              </button>
+              <button class="rightbutton" type="button">
+                <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping" style="font-size:24px;"></i></a>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+          <div class="titlehead2" style="background-color:  rgb(255, 255, 127);">
+            <div class="title2">
+              <h3 align="center" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#099d40; padding: 20px;" class="seasontitle">All Products</h4>
+            </div>
+        </div>
+
+
+
+        <div class="row wholecontainer">
+            <div class="sidebar col-sm-2">
+                <div class="sidebarcontainer">
+                    <h5 style="padding-left: 10%; padding-top: 10%;">Sort by</h5>
+                    <form name="searchform" method="post">
+                        <div class="searchprice">
+                            <h6>Price range</h6>
+                            <input type="radio" name="price" id="price1">
+                            <label for="price1">$5-9</label><br/>
+                            <input type="radio" name="price" id="price2">
+                            <label for="price2">$9.1-15</label><br/>
+                            <input type="radio" name="price" id="price3">
+                            <label for="price3">$15.1-20</label><br/>
+                        </div>   
+                        <hr width="100%"/>  
+                        <div class="searchtype">
+                            <h6>Type</h6>
+                            <input type="radio" name="type" id="type1">
+                            <label for="type1">Cacti</label><br/>
+                            <input type="radio" name="type" id="type2">
+                            <label for="type2">Succulents</label><br/>
+                            <input type="radio" name="type" id="type3">
+                            <label for="type3">Others</label><br/>
+                            <button type="button" id="reset">
+                              Search
+                          </button>    
+                        </div> 
+
+                    </form>
+            </div> 
+        </div>
+
+
+            <div class="productcontainer col-sm-10">
+                <div class="seasonspecial">
+              
+                    <div class="card 5to9 cacti" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/20. Burro's Tail/christmas1.avif" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/20. Burro's Tail/christmas2.webp" alt="Card image cap">
+                        </div>
+                        <div class="card-body 5to9 cacti" align="center">
+                          <h5 class="card-title window 5to9 cacti"><a href="#">Christmas Cactus</a></h5>
+                          <p class="card-text 5to9 cacti">A long-lasting holiday plant with colorful, tubular flowers in pink or lilac colors.</p>
+                        </div>
+                        <div class="card-footer 5to9 cacti" align="center">
+                          <div class="cardprice 5to9 cacti">Price: $5.5</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+
+                    <div class="card 91to15 cacti" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/12. Moon Cactus/moon1.jpg" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/12. Moon Cactus/moon2.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body 91to15 cacti" align="center">
+                          <h5 class="card-title window 91to15 cacti"><a href="#">Moon Cactus</a></h5>
+                          <p class="card-text 91to15 cacti">This small cactus blooms luminescent colors from orange to pink and more, these plants almost look unreal.</p>
+                        </div>
+                        <div class="card-footer 91to15 cacti" align="center">
+                          <div class="cardprice 91to15 cacti">Price: $10</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="card 5to9 succulents" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/4. Jade Plants/png7.jpg" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/4. Jade Plants/png6.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body 5to9 succulents" align="center">
+                          <h5 class="card-title window 5to9 succulents"><a href="#">Jade Plants</a></h5>
+                          <p class="card-text succulents">Jade plants feature thick, woody stems topped by green, fleshy leaves with an oval shape.</p>
+                        </div>
+                        <div class="card-footer 5to9 succulents" align="center">
+                          <div class="cardprice 5to9 succulents">Price: $6</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="card 151to20 others" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/13.  Baby Rubber Plant/rubber1.webp" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/13.  Baby Rubber Plant/rubber2.webp" alt="Card image cap">
+                        </div>
+                        <div class="card-body 151to20 others" align="center">
+                          <h5 class="card-title window 151to20 others"><a href="#">Baby Rubber Plants</a></h5>
+                          <p class="card-text 151to20 others">Peperomia obtusifolia, with its large, glossy round foliage, can liven up any coffee table!</p>
+                        </div>
+                        <div class="card-footer 151to20 others" align="center">
+                          <div class="cardprice 151to20 others">Price: $17</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="card 91to15 cacti" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/12. Moon Cactus/oldlady1.jpg" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/12. Moon Cactus/oldlady2.webp" alt="Card image cap">
+                        </div>
+                        <div class="card-body 91to15 cacti" align="center">
+                          <h5 class="card-title window 91to15 cacti"><a href="#">Old Lady</a></h5>
+                          <p class="card-text 91to15 cacti">The funny name may not be the most flattering, but it's an adorable cactus that is easy to grow.</p>
+                        </div>
+                        <div class="card-footer 91to15 cacti" align="center">
+                          <div class="cardprice 91to15 cacti">Price: $11</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="card 5to9 succulents" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/succulent/hens1.jpg" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/succulent/hens2.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body 5to9 succulents" align="center">
+                          <h5 class="card-title window 5to9 succulents"><a href="#">Hens and Chicks</a></h5>
+                          <p class="card-text 5to9 succulents">Hens and chicks plants are so called because of the rosette shape and habit of the plant to produce numerous babies.</p>
+                        </div>
+                        <div class="card-footer 5to9 succulents" align="center">
+                          <div class="cardprice 5to9 succulents">Price: $7.8</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="card 151to20 others" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/7. Orchid/orchid1.jpg" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/7. Orchid/orchid2.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body 151to20 others" align="center">
+                          <h5 class="card-title window 151to20 others"><a href="productdetail.html">Orchid</a></h5>
+                          <p class="card-text 151to20 others">A diverse and widespread group of flowering plants with colourful and fragrant blooms.</p>
+                        </div>
+                        <div class="card-footer 151to20 others" align="center">
+                          <div class="cardprice 151to20 others">Price: $18.5</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="card 151to20 cacti" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/12. Moon Cactus/scarletball1.jpg" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/12. Moon Cactus/scarletball2.webp" alt="Card image cap">
+                        </div>
+                        <div class="card-body 151to20 cacti" align="center">
+                          <h5 class="card-title window 151to20 cacti"><a href="#">Scarlet Ball</a></h5>
+                          <p class="card-text 151to20 cacti">This small rounded cactus has a profusion of delicate spines, giving it an almost fuzzy appearance.</p>
+                        </div>
+                        <div class="card-footer 151to20 cacti" align="center">
+                          <div class="cardprice 151to20 cacti">Price: $19</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="card 151to20 cacti" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/12. Moon Cactus/tomthumb1.jpg" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/12. Moon Cactus/tomthumb2.webp" alt="Card image cap">
+                        </div>
+                        <div class="card-body 151to20 cacti" align="center">
+                          <h5 class="card-title window 151to20 cacti"><a href="#">Tom Thumb</a></h5>
+                          <p class="card-text 151to20 cacti">This cactus prefers bright, indirect, rather than direct, sunlight. Water when mostly dry. The golden yellow flowers are 2 inches wide.</p>
+                        </div>
+                        <div class="card-footer 151to20 cacti" align="center">
+                          <div class="cardprice 151to20 cacti">Price: $17.5</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="card 91to15 succulents" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/succulent/snake1.webp" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/succulent/snake2.webp" alt="Card image cap">
+                        </div>
+                        <div class="card-body 91to15 succulents" align="center">
+                          <h5 class="card-title window 91to15 succulents"><a href="#">Snake Plant</a></h5>
+                          <p class="card-text 91to15 succulents">Snake plant, also called mother-in-law's tongue, is a popular and hardy houseplant with stiff, sword-like leaves</p>
+                        </div>
+                        <div class="card-footer 91to15 succulents" align="center">
+                          <div class="cardprice 91to15 succulents">Price: $13.7</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="card 5to9 others" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/17. Bamboo Palm/bamboo3.webp" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/17. Bamboo Palm/bamboo2.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body 5to9 others" align="center">
+                          <h5 class="card-title window 5to9 others"><a href="#">Air Plant</a></h5>
+                          <p class="card-text 5to9 others">These take moisture from the air using specially adapted scales on their spiky leaves.</p>
+                        </div>
+                        <div class="card-footer 5to9 others" align="center">
+                          <div class="cardprice 5to9 others">Price: $6.7</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                      <div class="card 151to20 succulents" style="width: 18rem;">
+                        <div class="imageswitch">
+                          <img class="card-img-bottom" src="img/plantimages/succulent/string1.webp" alt="Card image cap">
+                          <img class="card-img-top" src="img/plantimages/succulent/string2.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body 151to20 succulents" align="center">
+                          <h5 class="card-title window 151to20 succulents"><a href="#">String of pearls</a></h5>
+                          <p class="card-text 151to20 succulents">Unique vining succulents that are easily recognizable by their tiny pea-shaped leaves.</p>
+                        </div>
+                        <div class="card-footer 151to20 succulents" align="center">
+                          <div class="cardprice 151to20 succulents">Price: $16</div>
+                          <div class="addtocart">                  
+                                  <button type="button" name="addtocart">
+                                      Add to cart
+                                  </button>
+                          </div>
+                        </div>
+                      </div>
+  
+      
+  
+      
+                  </div>  
+      
+            </div>
+        </div>
+
+
+          
+          <footer>
+            <div class="flex-footer">
+              <div class="brandinfolabel">
+                <p>Email</p>
+                <p>Address</p>
+                <p>Phone</p>
+              </div>
+
+              <div class="vl"></div>
+
+              <div class="brandinfo">
+                <p>alittlegreener@miniwonder.com</p>
+                <p>23 Hang Duong Street, Xuan Loc Ward, Thanh Lieu District, Thai Binh City</p>
+                <p>0923-08-37-12</p>
+              </div>
+
+              <div class="externallink">
+                <p style="border-bottom: 1px solid white;"><b><i>Talk about us on</i></b></p>
+                <button type="button" onclick="location.href='facebook.com'" class="external"><i class="fa-brands fa-facebook"></i></button>
+                <button type="button" href="instagram.com" class="external"><i class="fa-brands fa-instagram"></i></button>
+                <button type="button" href="x.com" class="external"><i class="fa-brands fa-twitter"></i></button>
+              </div>
+            </div>
+              <p align="center">&copy; Copyright 2024. <b>alittlegreener.com</b></p>
+            </footer>
+
+    </body>
+</html>

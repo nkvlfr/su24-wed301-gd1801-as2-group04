@@ -1,0 +1,305 @@
+/* Navigation bar */
+
+.logo {
+    max-width: 15%;
+}
+
+.navbar-brand {
+    max-width: 30%;  
+}
+
+.searchinput {
+    width: 80%;
+}
+
+.d-flex {
+    max-width: 130%;
+}
+
+.container-fluid {
+    background-color: #099d40; 
+}
+
+.nav-link {
+    color: white;
+}
+
+nav {
+    padding: 0;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: yellow;
+    transition: all .5s;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-item {
+    padding-right: 3px;
+}
+
+.dropdown-menu {
+    background-color: #e5ffee;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(249, 249, 180);
+    color: #099d40;
+    font-weight: bold;
+}
+
+.searchinput:focus {
+    background-color: #ecfff3;
+}
+
+.searchbutton:hover {
+    background-color: white;
+}
+
+.searchbutton:hover .searchtext {
+    color: #099d40; 
+}
+
+.rightbutton {
+    border: 0;
+    background-color: transparent;
+    color: white; 
+    font-size:24px;
+}
+
+.rightbutton:hover i {
+    color: yellow;
+}
+
+.rightbutton a {
+    text-decoration: none;
+    color: white;
+}
+
+.rightbutton a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color:#02421a;
+}
+
+/* Footer */
+
+footer {
+    background-color:#099d40; 
+    padding-top: 20px; 
+    padding-bottom: 10px;
+    font-size: 14px; 
+    color: white;
+    line-height: 15px;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+.flex-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.brandinfo {
+    padding-left: 10px;
+    margin-right: 50px;
+}
+
+.brandinfolabel {
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.vl {
+    border-right: 2px solid white;
+    height: 75px;
+    padding-left: 10px;
+  }
+
+.external {
+    font-size: 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+@media only screen and (max-width: 1400px) {
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+/*Form*/
+
+.formcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: stretch;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.inputname {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 7px;
+}
+
+input:focus {
+    background-color: #dbf4e4;
+}
+
+.registersubmit, .loginsubmit {
+    border: 2px solid #099d40;
+    background-color: snow;
+    color:#099d40;
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.registersubmit {
+    margin-left: 20px;
+}
+
+.registersubmit:hover, .loginsubmit:hover {
+    background-color:#099d40;
+    color: snow;
+}
+
+.formtitle {
+    color:#099d40;
+    margin-bottom: 15px;
+    border-radius: 50% 50%;
+    border: 2px solid #099d40;
+    border-top: none;
+    width: 70%;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.registerform {
+    position: relative;
+    padding-right: 50px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    background-color:#e6f5eb;
+    border-radius: 5px 0px 0px 50px;
+    border-right: 2px solid #099d40;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.loginform {
+    position: relative;
+    background-color:#e6f5eb;
+    padding-right: 30px;
+    border-radius: 0px 5px 50px 0px;
+    padding-left: 30px;
+    box-shadow: 14px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+@media only screen and (max-width: 686px) {
+
+    .registerform {
+        border-radius: 5px 5px 50px 50px;
+        margin-bottom: 30px;
+    }
+
+    .loginform {
+        border-radius: 5px 5px 50px 50px;
+        position: relative;
+        margin-bottom: 200px;
+    }
+
+    .formcontainer {
+        overflow: scroll;
+    }
+
+    .hangerleft, .hangerright {
+        display: none;
+    }
+
+    .loginsubmit {
+        width: 35%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* Hanger*/
+
+.hanger {
+    display: flex;
+}
+
+.hangerleft, .hangerright {
+    background-color:#099d40;
+    color:#099d40;
+    height: 50px;
+    width: 20px;
+    top: -30px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.hangerleft {
+    position: absolute;
+    z-index: 2;
+}
+
+
+.hangerright {
+    margin-left: 70%;
+    position: absolute;
+    z-index: 2;
+}
+
+.randomshape {
+    width: 0;
+    height: 0;
+    border-top: 60px solid #099d40;
+    border-right: 60px solid transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50% 0% 0%;
+}
+
+
+

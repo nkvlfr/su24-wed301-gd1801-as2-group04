@@ -1,0 +1,262 @@
+/* Navigation bar */
+
+.logo {
+    max-width: 15%;
+}
+
+.navbar-brand {
+    max-width: 30%;  
+}
+
+.searchinput {
+    width: 80%;
+}
+
+.d-flex {
+    max-width: 130%;
+}
+
+.container-fluid {
+    background-color: #099d40; 
+}
+
+.nav-link {
+    color: white;
+}
+
+nav {
+    padding: 0;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: yellow;
+    transition: all .5s;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-item {
+    padding-right: 3px;
+}
+
+.dropdown-menu {
+    background-color: #e5ffee;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(249, 249, 180);
+    color: #099d40;
+    font-weight: bold;
+}
+
+.searchinput:focus {
+    background-color: #ecfff3;
+}
+
+.searchbutton:hover {
+    background-color: white;
+}
+
+.searchbutton:hover .searchtext {
+    color: #099d40; 
+}
+
+.rightbutton {
+    border: 0;
+    background-color: transparent;
+    color: white; 
+    font-size:24px;
+}
+
+.rightbutton:hover i {
+    color: yellow;
+}
+
+.rightbutton a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #dbf4e4;   
+}
+
+
+/*User Profile*/
+
+/*Sidebar*/
+
+/*Sidebar*/
+
+
+.sidebarcontainer {
+    background-color: white;
+    height: fit-content;
+    margin-top: 26px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 0 10px 10px 0;
+}
+
+.sidebar .infonav div {
+    padding-left:15%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sidebar .infonav div:first-child {
+    padding-top: -10px;
+}
+
+@media only screen and (min-width: 1536px) {
+    .sidebarcontainer {
+        max-width: 70%;
+    }
+}
+
+.ordernow {
+    font-weight: 600;
+    border-right: 4px solid #099d40;
+    background-color: rgb(246, 246, 148);
+    cursor: pointer;
+}
+
+.sidebar hr {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar .infonav a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar .infonav .accountlink:hover {
+    font-weight: 600;
+    border-right: 4px solid #099d40;
+    background-color:#e5ffee;
+    cursor: pointer;  
+}
+
+
+/*Form*/
+
+h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin-bottom: 20px;
+   
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.birthday-group {
+    display: flex;
+    gap: 10px;
+}
+
+.birthday-group select {
+    flex: 1;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: snow;
+    border: 2px solid #099d40;
+    color:#099d40;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color:#099d40;
+    color: white;
+}
+
+.form-left,
+.form-right {
+    width: 48%;
+}
+
+.form-right .form-group:nth-child(4) {
+    display: inline;
+    background-color: #ecfff3;
+}
+
+
+
+
+/* Footer */
+
+footer {
+    background-color:#099d40; 
+    padding-top: 20px; 
+    padding-bottom: 10px;
+    font-size: 14px; 
+    color: white;
+    line-height: 15px;
+    z-index: 1;
+    width: 100%;
+}
+
+.flex-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.brandinfo {
+    padding-left: 10px;
+    margin-right: 50px;
+}
+
+.brandinfolabel {
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.vl {
+    border-right: 2px solid white;
+    height: 75px;
+    padding-left: 10px;
+  }
+
+.external {
+    font-size: 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}

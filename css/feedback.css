@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap");
+
+/* Navigation bar */
+
+.logo {
+    max-width: 15%;
+}
+
+.navbar-brand {
+    max-width: 30%;  
+}
+
+.searchinput {
+    width: 80%;
+}
+
+.d-flex {
+    max-width: 130%;
+}
+
+.container-fluid {
+    background-color: #099d40; 
+}
+
+.nav-link {
+    color: white;
+}
+
+nav {
+    padding: 0;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: yellow;
+    transition: all .5s;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-item {
+    padding-right: 3px;
+}
+
+.dropdown-menu {
+    background-color: #e5ffee;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(249, 249, 180);
+    color: #099d40;
+    font-weight: bold;
+}
+
+.searchinput:focus {
+    background-color: #ecfff3;
+}
+
+.searchbutton:hover {
+    background-color: white;
+}
+
+.searchbutton:hover .searchtext {
+    color: #099d40; 
+}
+
+.rightbutton {
+    border: 0;
+    background-color: transparent;
+    color: white; 
+    font-size:24px;
+}
+
+.rightbutton:hover i {
+    color: yellow;
+}
+
+.rightbutton a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #edfff4;
+}
+
+/* Footer */
+
+footer {
+    background-color:#099d40; 
+    padding-top: 20px; 
+    padding-bottom: 10px;
+    font-size: 14px; 
+    color: white;
+    line-height: 15px;
+    z-index: 1;
+    width: 100%;
+}
+
+.flex-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.brandinfo {
+    padding-left: 10px;
+    margin-right: 50px;
+}
+
+.brandinfolabel {
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.vl {
+    border-right: 2px solid white;
+    height: 75px;
+    padding-left: 10px;
+  }
+
+.external {
+    font-size: 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+
+
+/*Form*/
+
+.feedbackform {
+    width: 60vw;
+}
+
+
+.recommend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.improve {
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    margin-left: 20%;
+}
+
+.lastthree {
+    margin-left: 25%;
+}
+
+@media only screen and (max-width: 800px) {
+    .feedbackform {
+      width: 100%;
+    }
+    
+    .improve {
+        margin-left: 0;
+    }
+
+    .firstthree {
+        width: 100%;
+    }
+    .lastthree {
+        margin-left: 0;
+        width: 100%;
+    }
+  }
+
+  h1 {
+      font-weight: bold;
+  }
+  input,
+  select,
+  .submitbutton {
+    font: inherit;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .form-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 40px;
+  
+  }
+  #title,
+  #description {
+    text-align: center;
+    margin: 0;
+  }
+  label {
+    display: inline;
+    margin: 0.5rem;
+    padding: 0;
+  }
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  select {
+    padding: 6px;
+    margin: 8px 0;
+    background: rgba(233, 233, 233, 0.68);
+    border: 0;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-bottom: 15px;
+  }
+
+.submitbutton:hover {
+    background-color:#099d40;
+    color:whitesmoke;   
+    min-height: 2em;
+  }
+  
+.submitbutton {
+      background-color: whitesmoke;
+      color:#099d40;
+      border: 2px solid #099d40;
+        padding: 6px;
+        margin: 8px 0;
+  }
+  
+input:focus {
+    background-color: beige;
+}
+
+

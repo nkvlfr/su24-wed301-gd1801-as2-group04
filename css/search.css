@@ -1,0 +1,283 @@
+/* Navigation bar */
+
+.logo {
+    max-width: 15%;
+}
+
+.navbar-brand {
+    max-width: 30%;  
+}
+
+.searchinput {
+    width: 80%;
+}
+
+.d-flex {
+    max-width: 130%;
+}
+
+.container-fluid {
+    background-color: #099d40; 
+}
+
+.nav-link {
+    color: white;
+}
+
+nav {
+    padding: 0;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: yellow;
+    transition: all .5s;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-item {
+    padding-right: 3px;
+}
+
+.dropdown-menu {
+    background-color: #e5ffee;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(249, 249, 180);
+    color: #099d40;
+    font-weight: bold;
+}
+
+.searchinput:focus {
+    background-color: #ecfff3;
+}
+
+.searchbutton:hover {
+    background-color: white;
+}
+
+.searchbutton:hover .searchtext {
+    color: #099d40; 
+}
+
+.rightbutton {
+    border: 0;
+    background-color: transparent;
+    color: white; 
+    font-size:24px;
+}
+
+.rightbutton:hover i {
+    color: yellow;
+}
+
+.rightbutton a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #dbf4e4;   
+}
+
+
+
+/* Footer */
+
+footer {
+    background-color:#099d40; 
+    padding-top: 20px; 
+    padding-bottom: 10px;
+    font-size: 14px; 
+    color: white;
+    line-height: 15px;
+    z-index: 1;
+    width: 100%;
+}
+
+.flex-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.brandinfo {
+    padding-left: 10px;
+    margin-right: 50px;
+}
+
+.brandinfolabel {
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.vl {
+    border-right: 2px solid white;
+    height: 75px;
+    padding-left: 10px;
+  }
+
+.external {
+    font-size: 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+
+
+/* Titlehead */
+
+.titlehead {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    margin-left: 180px;
+}
+
+.titlehead .seeall .viewproduct {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-style: italic;  
+}
+
+.titlehead .seeall .viewproduct:hover {
+    font-weight: bold;
+}
+
+
+
+/*Side bar*/
+
+.wholecontainer {
+    width: 100%;
+}
+
+.sidebarcontainer {
+    background-color:#ecfff3;
+}
+
+.searchprice, .searchtype {
+    margin: 0px 0px 0px 10px;
+    padding: 5px;
+}
+
+@media only screen and (min-width: 1122px) {
+    .searchprice, .searchtype {
+        padding: 10px 10px 10px 30px;
+    }
+}
+
+#reset {
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+    border:2px solid #099d40;
+    color:#099d40;
+    font-weight: 600;
+}
+
+
+
+/*Card Product*/
+
+.seasonspecial {
+    display: flex;
+    justify-content: center;   
+    flex-wrap: wrap;
+    background-color:#acbdb2;
+    padding-bottom: 30px;
+}
+
+.card {
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    margin: 20px 10px 0px 10px;
+    width: 10vw;
+}
+
+.card-body {
+    border-radius: 0;
+}
+
+.imageswitch {
+    position: relative;
+}
+
+.imageswitch .card-img-bottom {
+    position: absolute;
+    object-fit: cover;
+    z-index: 3;
+    transition: 0.3s;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.imageswitch .card-img-top {
+    position: relative;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.imageswitch:hover .card-img-bottom {
+    opacity: 0;
+}
+
+.window a {
+    text-decoration: none;
+    color:#099d40;
+}
+
+.window a:hover {
+    text-decoration: underline;
+    color: yellowgreen;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbf4e4;
+    padding: 15px;
+}
+
+.card-footer .cardprice {
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+}
+
+.card-footer .addtocart {
+    width: 100%;
+    height: 100%;
+}
+
+.card-footer .addtocart button {
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    border: none;
+    background-color: #099d40;
+}
+
+.card-footer .addtocart button:hover {
+    background-color: yellowgreen;
+    color:#099d40;
+    font-weight: 700;
+}
+

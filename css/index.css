@@ -1,0 +1,457 @@
+/* Navigation bar */
+
+.logo {
+    max-width: 15%;
+}
+
+.navbar-brand {
+    max-width: 30%;  
+}
+
+.searchinput {
+    width: 80%;
+}
+
+.d-flex {
+    max-width: 130%;
+}
+
+.container-fluid {
+    background-color: #099d40; 
+}
+
+.nav-link {
+    color: white;
+}
+
+nav {
+    padding: 0;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: yellow;
+    transition: all .5s;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-item {
+    padding-right: 3px;
+}
+
+.dropdown-menu {
+    background-color: #e5ffee;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(249, 249, 180);
+    color: #099d40;
+    font-weight: bold;
+}
+
+.searchinput:focus {
+    background-color: #ecfff3;
+}
+
+.searchbutton:hover {
+    background-color: white;
+}
+
+.searchbutton:hover .searchtext {
+    color: #099d40; 
+}
+
+.rightbutton {
+    border: 0;
+    background-color: transparent;
+    color: white; 
+    font-size:24px;
+}
+
+.rightbutton:hover i {
+    color: yellow;
+}
+
+.rightbutton a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #dbf4e4;   
+}
+
+
+
+/* Footer */
+
+footer {
+    background-color:#099d40; 
+    padding-top: 20px; 
+    padding-bottom: 10px;
+    font-size: 14px; 
+    color: white;
+    line-height: 15px;
+    z-index: 1;
+    width: 100%;
+}
+
+.flex-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.brandinfo {
+    padding-left: 10px;
+    margin-right: 50px;
+}
+
+.brandinfolabel {
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.vl {
+    border-right: 2px solid white;
+    height: 75px;
+    padding-left: 10px;
+  }
+
+.external {
+    font-size: 20px;
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+
+
+/* Titlehead */
+
+.titlehead {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    margin-left: 180px;
+}
+
+.titlehead .seeall .viewproduct {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-style: italic;  
+}
+
+.titlehead .seeall .viewproduct:hover {
+    font-weight: bold;
+}
+
+
+
+/* Best sellers */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: start;
+    padding: 40px;
+    background-color:#076429;
+}
+
+.card-container .card {
+    position: relative;
+    max-width: 300px;
+    height: 460px;
+    background-color:#099d40;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    border: none;
+}
+
+@media only screen and (max-width: 1400px) {
+    .card-container {
+        overflow: auto;
+    }
+
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+  }
+
+.card-container .card:hover{
+    height: 460px;
+}
+
+.card-container .card .image {
+    position:relative;
+    top: -60px;
+    z-index: 3;
+}
+
+.card-container .card .image img {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-container .card .image h4 {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card-container .card .content {
+    margin-top: -70px;
+    text-align: center;
+}
+
+.card-container .card .content p {
+    color:white;
+}
+
+
+
+.hrdivider {
+    border: 1px solid white;
+    opacity: 1;
+}
+
+
+
+/*View product*/
+.viewproduct {
+    border-radius: 4px;
+    background-color: white;
+    border: none;
+    color:#099d40;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px 20px 5px 20px;
+    width: 190px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0 0 5px 0;
+  }
+  
+.viewproduct span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.viewproduct span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+  }
+  
+.viewproduct:hover span {
+    padding-right: 25px;
+  }
+  
+.viewproduct:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.cartbutton {
+    border: 0;
+    background-color: transparent;
+    color: rgb(255, 174, 0); 
+    font-size:24px;
+}
+
+.cartbutton:hover {
+    color: yellow;
+}
+
+
+/*Quote*/
+
+.quote {
+    background-color: snow;
+    color:#099d40;
+    font-size: 4vw;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.excerpt {
+    font-style: italic;
+    padding: 20px 0px 20px 0px;
+}
+
+.randomshape {
+    width: 7vw;
+    height: 7vw;
+    aspect-ratio: 2;
+    margin: 0 20px 0 20px;
+    background-color:#099d40;
+    rotate: 45deg;
+    border-radius: 0 50% 50% 50%;
+}
+
+
+/*Season special*/
+
+.seasonspecial {
+    display: flex;
+    justify-content: center; 
+    background-color:#076429;  
+    margin-top: -10px;
+}
+
+.card {
+    border-radius: 50% 50% 0 0;
+    border: none;
+    margin: 20px 10px 0px 10px;
+}
+
+.card-body {
+    border-radius: 0;
+}
+
+.imageswitch {
+    position: relative;
+}
+
+.imageswitch .card-img-bottom {
+    position: absolute;
+    object-fit: cover;
+    z-index: 3;
+    transition: 0.3s;
+    border-radius: 50% 50% 0 0;
+}
+
+.imageswitch .card-img-top {
+    position: relative;
+    border-radius: 50% 50% 0 0;
+}
+
+.imageswitch:hover .card-img-bottom {
+    opacity: 0;
+}
+
+.window a {
+    text-decoration: none;
+    color:#099d40;
+}
+
+.window a:hover {
+    text-decoration: underline;
+    color: yellowgreen;
+}
+
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+}
+
+.card-footer .cardprice {
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+}
+
+.card-footer .addtocart {
+    width: 100%;
+    height: 100%;
+}
+
+.card-footer .addtocart button {
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    border: none;
+    background-color: #099d40;
+}
+
+.card-footer .addtocart button:hover {
+    background-color: rgb(234, 234, 61);
+    color:#099d40;
+    font-weight: 700;
+}
+
+/*Sale off*/
+
+.saleoff {
+    margin-top: -10px;
+}
+
+.saleoffcontainer {
+    position: relative;
+    z-index: 4;
+    width: 100vw;
+}
+
+.saleoffcontainer img {
+    margin-top: -8px;
+    max-width: 70vw;
+    filter:brightness(50%);
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0,1), rgba(255, 255, 255, 0));
+    text-align: center;
+    padding: 50px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    text-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: 0.3s ease-in-out;
+  }
+
+.centered:hover {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor:pointer;
+}
+
+.centered:hover .code b {
+    color: yellow;
+}
+
+@media only screen and (max-width: 600px) {
+    .selloffcontainer {
+        width: 100vw;
+    }
+}

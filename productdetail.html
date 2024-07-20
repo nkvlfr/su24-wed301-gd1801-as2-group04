@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Product Detail</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">        
+        <style type="text/css">
+        @import "css/productdetail.css";
+        </style>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $(".prev").on("click", function(){
+              
+              var prev = $(this).closest('.spinner').find('input').val();
+              if (prev == 1) {
+                $(this).closest('.spinner').find('input').val('1');
+              }else{
+                var prevVal = prev - 1;
+                $(this).closest('.spinner').find('input').val(prevVal);
+              }
+            });
+          });
+
+
+          $(document).ready(function(){
+            $(".next").on("click", function(){
+              
+              var next = $(this).closest('.spinner').find("input").val();
+              if (next == 10) {
+                $(this).closest('.spinner').find('input').val('10');
+              }else{
+                var nextVal = ++next;
+                $(this).closest('.spinner').find('input').val(nextVal);
+              }
+            });
+          });
+
+         
+          </script>
+
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #099d40;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="img/brand/shortwhite_a little greener short copy.png" class="logo">
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse outer" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Our home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="searchbytype.html" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Resources
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
+                  <li><a class="dropdown-item" href="faq.html">FAQs</a></li>
+                  <li><a class="dropdown-item" href="tos.html">ToS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feedback.html">Feedback</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2 searchinput" type="search" placeholder="Search in page" aria-label="Search">
+              <button class="btn btn-outline-success searchbutton" type="submit" style="border-color: white; color: white;"><span class="searchtext">Search</span></button>
+              <button class="rightbutton" type="button">
+                <a href="registerlogin.html">
+                <i class="fa-solid fa-user"></i></a>
+              </button>
+              <button class="rightbutton" type="button">
+                <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping" style="font-size:24px;"></i></a>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Our Home</a></li>
+          <li class="breadcrumb-item active"><a href="search.html">Product</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="productdetail.html">Orchid</a></li>
+        </ol>
+      </nav>
+
+
+        <div class="row">
+          <div class="productcarousel col-sm-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/plantimages/7. Orchid/orchid1.jpg" class="d-block w-100" alt="Orchid1">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/plantimages/7. Orchid/orchid2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/plantimages/7. Orchid/orchid6.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+
+          <div class="introdetail col-sm-6">
+            <form method="post" name="orderintro">
+                <h2>Orchid</h2>
+                <hr width="98%"/>
+                <p><b>Price: $17</b></p>
+                <p>A popular houseplant, orchids (Orchidaceae) are easy to grow and care for once you understand the ideal growing conditions and maintenance requirements. While there are thousands of orchid species to choose from, the most commonly sold orchids are Phalaenopsis, Cattleya, Dendrobium, and Cymbidium.</p>
+                <p>Size</p>
+
+                <div class="sizecheck">
+                  <input type="radio" class="sizesmall" name="size" value="Small" id="sizesmall" checked required>
+                    <label for="sizesmall" class="sizelabel">Small</label> 
+                  <input type="radio" class="sizemedium" name="size" value="Medium" id="sizemedium">
+                    <label for="sizemedium" class="sizelabel">Medium</label>
+                  <input type="radio" class="sizelarge" name="size" value="Large" id="sizelarge">
+                    <label for="sizelarge" class="sizelabel">Large</label>
+                </div>
+
+                <div class="titleflex">
+                <p>Color</p>
+                <p>Number</p><br/>
+                </div>
+
+                <div class="flexcheck">
+                    <div class="colorcheck">
+                      <input type="radio" class="white" name="color" id="white" checked required>
+                      <label for="white" class="whitelabel"><i class="fa-solid fa-check" align="center"></i></label>
+                      <input type="radio" class="pink" name="color" id="pink">
+                      <label for="pink" class="pinklabel"><i class="fa-solid fa-check"></i></label>
+                      <input type="radio" class="blue" name="color" id="blue">
+                      <label for="blue" class="bluelabel"><i class="fa-solid fa-check"></i></label>
+                    </div>
+
+                    <div class="spinner" align="left">
+                      <div class="prev">-</div>
+                      <div class="next">+</div>
+                      <input type="number" name="intronumber" class="number-spinner" min="1" value="1" required>
+                    </div>
+                </div>
+                <button type="submit" name="addtocart"><a href="cart.html">Add to cart</a></button>
+
+            </form>
+          </div>
+
+        </div>
+
+        <h3 style="padding-left: 5px; color:#099d40; margin-top: 20px;" align="center">How to take care of them?</h3>
+
+        <div class="accordioncontainer" align="center">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Light <i class="fa-solid fa-sun"></i>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Orchids need <strong>bright light </strong>to produce blooms. However, direct sun can burn them. Opt for bright, indirect light from a south- or east-facing window.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Soil <i class="fa-solid fa-seedling"></i>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Orchids will not thrive in regular potting soil or potting mix. Purchase or make a DIY orchid-growing medium, which should be lightweight and fast-draining. Common mixes include bark, sphagnum moss, perlite, and peat. A <strong>slightly acidic soil pH </strong>is ideal.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Water <i class="fa-solid fa-droplet"></i>
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Orchids typically need water twice a week in the warmer months when the plant is actively growing and only once a week in the colder months. Use room-temperature water, and water slowly until it flows out of the pot's drainage openings. 
+
+Orchids need to dry out between waterings to prevent rot. If the growing medium feels dry to the touch and the pot feels light, it's time to water.
+
+Or, look at the roots themselves: if they’re plump and white or green, that means they’re well-watered. If they’re shriveled and gray, they need water. If they’re shriveled but spongey and black or brown, they might be rotting.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Temperature and Humidity <i class="fa-solid fa-temperature-three-quarters"></i>
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Depending how they're classified, orchids do best in ranges between 50 degrees and 90 degrees Fahrenheit. They prefer humidity levels from around 40% to 70%.
+
+You can keep an orchid blooming longer if you provide a warm and somewhat humid environment. Don't place your orchid where it will experience cold drafts, exposure to direct sunlight, or dry air from heating vents.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+        <h3 style="padding-left: 5px; color:#099d40;" align="center">You may also like</h3>
+        
+        <div class="seasonspecial">
+              
+          <div class="card" style="width: 18rem;">
+            <div class="imageswitch">
+              <img class="card-img-bottom" src="img/plantimages/13.  Baby Rubber Plant/rubber1.webp" alt="Card image cap">
+              <img class="card-img-top" src="img/plantimages/13.  Baby Rubber Plant/rubber2.webp" alt="Card image cap">
+            </div>
+            <div class="card-body" align="center">
+              <h5 class="card-title window"><a href="#">Baby Rubber Plant</a></h5>
+              <p class="card-text">Peperomia obtusifolia, with its large, glossy round foliage, can liven up any coffee table!</p>
+            </div>
+            <div class="card-footer 151to20 others" align="center">
+              <div class="cardprice 151to20 others">Price: $17</div>
+              <div class="addtocart">                  
+                      <button type="button" name="addtocart">
+                          Add to cart
+                      </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="imageswitch">
+              <img class="card-img-bottom" src="img/plantimages/1. Air Plant/airplant2.jpg" alt="Card image cap">
+              <img class="card-img-top" src="img/plantimages/1. Air Plant/airplant1.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body" align="center">
+              <h5 class="card-title window"><a href="#">Air Plant</a></h5>
+              <p class="card-text">These take moisture from the air using specially adapted scales on their spiky leaves.</p>
+            </div>
+            <div class="card-footer 151to20 others" align="center">
+              <div class="cardprice 151to20 others">Price: $6.7</div>
+              <div class="addtocart">                  
+                      <button type="button" name="addtocart">
+                          Add to cart
+                      </button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card" style="width: 18rem;">
+            <div class="imageswitch">
+              <img class="card-img-bottom" src="img/plantimages/8. Bird's Nest Fern/birdnest5.jpg" alt="Card image cap">
+              <img class="card-img-top" src="img/plantimages/8. Bird's Nest Fern/birdnest4.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body" align="center">
+              <h5 class="card-title window"><a href="#">Bird's Nest Fern</a></h5>
+              <p class="card-text">The plant’s “new growth resembles small bird eggs as they arise from the fuzzy central rosette".</p>
+            </div>
+            <div class="card-footer 151to20 others" align="center">
+              <div class="cardprice 151to20 others">Price: $18</div>
+              <div class="addtocart">                  
+                      <button type="button" name="addtocart">
+                          Add to cart
+                      </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    
+
+
+        <footer>
+            <div class="flex-footer">
+              <div class="brandinfolabel">
+                <p>Email</p>
+                <p>Address</p>
+                <p>Phone</p>
+              </div>
+
+              <div class="vl"></div>
+
+              <div class="brandinfo">
+                <p>alittlegreener@miniwonder.com</p>
+                <p>23 Hang Duong Street, Xuan Loc Ward, Thanh Lieu District, Thai Binh City</p>
+                <p>0923-08-37-12</p>
+              </div>
+
+              <div class="externallink">
+                <p style="border-bottom: 1px solid white;"><b><i>Talk about us on</i></b></p>
+                <button type="button" onclick="location.href='facebook.com'" class="external"><i class="fa-brands fa-facebook"></i></button>
+                <button type="button" href="instagram.com" class="external"><i class="fa-brands fa-instagram"></i></button>
+                <button type="button" href="x.com" class="external"><i class="fa-brands fa-twitter"></i></button>
+              </div>
+            </div>
+              <p align="center">&copy; Copyright 2024. <b>alittlegreener.com</b></p>
+        </footer>
+
+    </body>
+</html>
